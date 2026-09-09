@@ -5,21 +5,21 @@
 class Enclave < Formula
   desc "A tool to run any command in a sandboxed environment using macOS's sandbox-exec"
   homepage "https://github.com/zhuxiangxiao/enclave"
-  version "3.1.0-alpha"
+  version "3.1.0-beta.1"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/zhuxiangxiao/enclave/releases/download/v3.1.0-alpha/enclave_3.1.0-alpha_darwin_amd64.tar.gz"
-    sha256 "368349f20bd11e4a8dc89441bcf226b1aa2f755a7e45a2670180bda13c81a81c"
+    url "https://github.com/zhuxiangxiao/enclave/releases/download/v3.1.0-beta.1/enclave_3.1.0-beta.1_darwin_amd64.tar.gz"
+    sha256 "efe1f26c8479575ad602f16dced106ebb32260f04561e70511feb959793b65f4"
 
     define_method(:install) do
       bin.install "enclave"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/zhuxiangxiao/enclave/releases/download/v3.1.0-alpha/enclave_3.1.0-alpha_darwin_arm64.tar.gz"
-    sha256 "b0ec048f5574fc939dd41642fc257111c49635746c68af015edb63934f02218b"
+    url "https://github.com/zhuxiangxiao/enclave/releases/download/v3.1.0-beta.1/enclave_3.1.0-beta.1_darwin_arm64.tar.gz"
+    sha256 "0afa76550def250ea3d06491a903556c0067044b8cf0ebb11e369b792071db62"
 
     define_method(:install) do
       bin.install "enclave"
